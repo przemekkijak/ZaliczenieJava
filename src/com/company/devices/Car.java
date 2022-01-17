@@ -24,6 +24,24 @@ public class Car extends Device {
 
     @Override
     public void sale(Human seller, Human buyer, Double price) {
+
+        if(!(seller.getCar() == this)) {
+            System.out.println("Nie mozesz sprzedac auta ktorego nie posiadasz");
+            return;
+        }
+
+        if(buyer.cash < price) {
+            System.out.println("Kupujacy ma za mało gotowki");
+            return;
+        }
+
+        seller.setCar(null);
+        buyer.setCar(this);
+
+        buyer.cash += price;
+        seller.cash -= price;
+
+        System.out.println(seller.firstName + " sprzedal samochod uzytkownikowi " + buyer.firstName);
     }
 
     public String toString() {
@@ -36,4 +54,6 @@ public class Car extends Device {
                 ", value=" + value +
                 '}';
     }
+
+
 }

@@ -48,6 +48,11 @@ public class Human extends Animal {
     }
 
     public void setCar(Car car) {
+
+        if (car == null) {
+            this.car = null;
+            return;
+        }
         if (this.salary > car.value) {
             System.out.println("Nie wiem jak to zrobiłeś, ale stać cie na tą furę! Kupiona za gotówkę");
             this.car = car;

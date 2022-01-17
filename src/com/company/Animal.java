@@ -1,6 +1,6 @@
 package com.company;
 
-public class Animal {
+public class Animal implements Saleable{
 
     final private String species;
     private boolean canFly;
@@ -60,6 +60,32 @@ public class Animal {
                 ", canFly='" + canFly + '\'' +
                 ", legs=" + legs +
                 '}';
+    }
+
+    @Override
+    public void sale(Human seller, Human buyer, Double price) {
+        if(this instanceof Human) {
+            System.out.println("Handel ludzmi póki co jest nielegalny, coming soon");
+            return;
+        }
+
+        if(!(seller.animal == this)) {
+            System.out.println("Nie mozesz sprzedac zwierzaka ktorego nie posiadasz");
+            return;
+        }
+
+        if(buyer.cash < price) {
+            System.out.println("Kupujacy ma za mało gotowki");
+            return;
+        }
+
+        seller.animal = null;
+        buyer.animal = this;
+
+        buyer.cash += price;
+        seller.cash -= price;
+
+        System.out.println(seller.firstName + " sprzedal zwierze uzytkownikowi " + buyer.firstName);
     }
 
 }

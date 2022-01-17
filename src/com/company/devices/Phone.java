@@ -23,11 +23,6 @@ public class Phone extends Device {
         return false;
     }
 
-    @Override
-    public void sale(Human seller, Human buyer, Double price) {
-
-    }
-
     public String toString() {
         return "Phone{" +
                 "producer='" + producer + '\'' +
@@ -36,5 +31,27 @@ public class Phone extends Device {
                 ", ram='" + ram + '\'' +
                 ", totalStorage=" + totalStorage +
                 '}';
+    }
+
+    @Override
+    public void sale(Human seller, Human buyer, Double price) {
+
+        if(!(seller.phone == this)) {
+            System.out.println("Nie mozesz sprzedac telefonu ktorego nie posiadasz");
+            return;
+        }
+
+        if(buyer.cash < price) {
+            System.out.println("Kupujacy ma za mało gotowki");
+            return;
+        }
+
+        seller.phone = null;
+        buyer.phone = this;
+
+        buyer.cash += price;
+        seller.cash -= price;
+
+        System.out.println(seller.firstName + " sprzedal telefon uzytkownikowi " + buyer.firstName);
     }
 }
