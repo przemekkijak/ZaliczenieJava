@@ -14,7 +14,7 @@ public class Human extends Animal {
     private Double salary;
 
     public Human(String firstName, String lastName, Double cash) {
-        super("homo sapiens", false, 2, true, 60.0);
+        super("homo sapiens", false, 2, true);
         this.firstName = firstName;
         this.lastName = lastName;
         this.cash = cash;
