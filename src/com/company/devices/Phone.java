@@ -1,4 +1,4 @@
-package com.company.Devices;
+package com.company.devices;
 
 
 import com.company.Human;
@@ -26,5 +26,15 @@ public class Phone extends Device {
     @Override
     public void sale(Human seller, Human buyer, Double price) {
 
+    }
+
+    public String toString() {
+        return "Phone{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", ram='" + ram + '\'' +
+                ", totalStorage=" + totalStorage +
+                '}';
     }
 }

@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.Devices.Car;
-import com.company.Devices.Phone;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 import java.util.Date;
 
@@ -62,5 +62,13 @@ public class Human extends Animal {
 
         System.out.println("Bieda w kraju, nie stać cie na fure. Zapraszam na wsb");
         return;
+    }
+
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", cash=" + cash +
+                '}';
     }
 }

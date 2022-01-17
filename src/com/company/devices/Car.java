@@ -1,4 +1,4 @@
-package com.company.Devices;
+package com.company.devices;
 
 import com.company.Human;
 
@@ -24,6 +24,16 @@ public class Car extends Device {
 
     @Override
     public void sale(Human seller, Human buyer, Double price) {
+    }
 
+    public String toString() {
+        return "Car{" +
+                "producer='" + producer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                ", colour='" + colour + '\'' +
+                ", engineVolume=" + engineVolume +
+                ", value=" + value +
+                '}';
     }
 }

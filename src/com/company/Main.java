@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.Devices.Car;
-import com.company.Devices.Phone;
+import com.company.devices.Car;
+import com.company.devices.Phone;
 
 public class Main {
 
@@ -11,6 +11,8 @@ public class Main {
         Animal cat = new Animal("Marek", false, 7, true);
 
         Car firstCar = new Car("Porshe", "911", 2004, "Black", 3.0, 42000.0);
+        Car secondCar = new Car("Porshe", "911", 2004, "Black", 3.0, 42000.0);
+
         Phone firstPhone = new Phone("Apple", "iPhone 11" , 2020, "black", 8, 64);
 
         Human human1 = new Human("Przemek", "Kijak", 5000.0);
@@ -19,11 +21,14 @@ public class Main {
         human1.animal = dog;
 
         //Test wyprowadzania martwego kota na spacer
-        cat.takeForAWalk();
-        cat.takeForAWalk();
-        cat.takeForAWalk();
-        cat.takeForAWalk();
-        cat.takeForAWalk();
-        cat.takeForAWalk();
+//        cat.takeForAWalk();
+//        cat.takeForAWalk();
+//        cat.takeForAWalk();
+//        cat.takeForAWalk();
+//        cat.takeForAWalk();
+//        cat.takeForAWalk();
+
+        System.out.println(firstCar);
+        System.out.println(secondCar);
     }
 }

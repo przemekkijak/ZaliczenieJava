@@ -1,4 +1,4 @@
-package com.company.Devices;
+package com.company.devices;
 
 
 import com.company.Saleable;
@@ -19,4 +19,5 @@ public abstract class Device implements Saleable {
     public abstract void turnOn();
 
     public abstract boolean isTurnedOn();
+
 }

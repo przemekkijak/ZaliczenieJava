@@ -54,4 +54,12 @@ public class Animal {
         }
     }
 
+    public String toString() {
+        return "Animal{" +
+                "species='" + species + '\'' +
+                ", canFly='" + canFly + '\'' +
+                ", legs=" + legs +
+                '}';
+    }
+
 }
