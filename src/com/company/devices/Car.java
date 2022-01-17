@@ -14,7 +14,7 @@ public class Car extends Device {
 
     @Override
     public void turnOn() {
-
+        System.out.println("Silnik w aucie włączony");
     }
 
     @Override
