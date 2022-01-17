@@ -1,5 +1,8 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.Human;
+import com.company.creatures.Pet;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -7,8 +10,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal dog = new Animal("Burek", true, 3, true);
-        Animal cat = new Animal("Marek", false, 7, true);
+        Animal dog = new Pet("Burek", true, 3, true);
+        Animal cat = new Pet("Marek", false, 7, true);
 
         Car firstCar = new Car("Porshe", "911", 2004, "Black", 3.0, 42000.0);
         Car secondCar = new Car("Porshe", "911", 2004, "Black", 3.0, 42000.0);

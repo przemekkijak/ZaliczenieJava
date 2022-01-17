@@ -1,6 +1,8 @@
-package com.company;
+package com.company.creatures;
 
-public class Animal implements Saleable{
+import com.company.Saleable;
+
+public abstract class Animal implements Saleable, Feedable {
 
     final private String species;
     private boolean canFly;
@@ -88,4 +90,15 @@ public class Animal implements Saleable{
         System.out.println(seller.firstName + " sprzedal zwierze uzytkownikowi " + buyer.firstName);
     }
 
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
+    }
 }

@@ -1,5 +1,6 @@
-package com.company;
+package com.company.creatures;
 
+import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
@@ -75,5 +76,10 @@ public class Human extends Animal {
                 ", lastName='" + lastName + '\'' +
                 ", cash=" + cash +
                 '}';
+    }
+
+    @Override
+    public void feed(double foodWeight) {
+
     }
 }
