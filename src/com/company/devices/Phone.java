@@ -1,11 +1,13 @@
 package com.company.devices;
 
-
 import com.company.creatures.Human;
+import java.net.URL;
+import java.util.List;
 
 public class Phone extends Device {
     final int ram;
     int totalStorage;
+    static final URL defaultAppServer = null;
 
     public Phone(String producer, String model, int yearOfProduction, String colour, int ram, int totalStorage) {
         super(producer, model, yearOfProduction, colour);
@@ -53,5 +55,21 @@ public class Phone extends Device {
         seller.cash -= price;
 
         System.out.println(seller.firstName + " sprzedal telefon uzytkownikowi " + buyer.firstName);
+    }
+
+
+    public void InstallAnnApp(String appName) {
+    }
+
+    public void InstallAnnApp(String appName, double version) {
+    }
+
+    public void InstallAnnApp(String appName, String serverUrl) {
+    }
+
+    public void InstallAnnApp(List<String> appNames) {
+    }
+
+    public void InstallAnnApp(URL appObject) {
     }
 }

@@ -4,6 +4,8 @@ import com.company.creatures.Animal;
 import com.company.creatures.Human;
 import com.company.creatures.Pet;
 import com.company.devices.Car;
+import com.company.devices.Diesel;
+import com.company.devices.LPG;
 import com.company.devices.Phone;
 
 public class Main {
@@ -13,10 +15,12 @@ public class Main {
         Animal dog = new Pet("Burek", true, 3, true);
         Animal cat = new Pet("Marek", false, 7, true);
 
-        Car firstCar = new Car("Porshe", "911", 2004, "Black", 3.0, 42000.0);
-        Car secondCar = new Car("Porshe", "911", 2004, "Black", 3.0, 42000.0);
+        Car firstCar = new Diesel("Porshe", "911", 2004, "Black", 3.0, 42000.0);
+        Car secondCar = new LPG("Porshe", "911", 2004, "Black", 3.0, 42000.0);
 //        firstCar.turnOn();
 //        secondCar.turnOn();
+
+        firstCar.refuel();
 
         Phone firstPhone = new Phone("Apple", "iPhone 11" , 2020, "black", 8, 64);
 //        firstPhone.turnOn();

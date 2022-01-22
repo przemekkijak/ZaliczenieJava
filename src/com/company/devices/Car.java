@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device {
+public abstract class Car extends Device {
     Double engineVolume;
     public Double value;
 
@@ -54,6 +54,8 @@ public class Car extends Device {
                 ", value=" + value +
                 '}';
     }
+
+    public abstract void refuel();
 
 
 }
