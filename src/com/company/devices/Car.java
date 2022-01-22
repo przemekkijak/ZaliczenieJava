@@ -2,8 +2,11 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
+import java.util.ArrayList;
+
 public abstract class Car extends Device {
     Double engineVolume;
+    public ArrayList<Human> previousOwners = new ArrayList<>();
 
     public Car(String producer, String model, int yearOfProduction, String colour, Double engineVolume, Double value) {
         super(producer, model, yearOfProduction, colour, value);
@@ -40,6 +43,12 @@ public abstract class Car extends Device {
             return;
         }
 
+        if (this.previousOwners.size() > 0) {
+            if (this.previousOwners.get(this.previousOwners.size() - 1) != buyer) {
+                System.out.println("Sprzedajacy nie jest wlascicielem pojazdu");
+            }
+        }
+
         seller.setCar(null, sellerCarSlot);
         buyer.setCar(this, buyerFreeSlot);
 
@@ -47,6 +56,29 @@ public abstract class Car extends Device {
         seller.cash -= price;
 
         System.out.println(seller.firstName + " sprzedal samochod uzytkownikowi " + buyer.firstName);
+        this.previousOwners.add(buyer);
+    }
+
+    public boolean checkIfUserHadThisCar(Human human) {
+        for(int i = 0; i<previousOwners.size(); i++) {
+            if (previousOwners.get(i) == human) {
+                System.out.println("User had this car before");
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean checkIfTransactionsWasMade(Human a, Human b) {
+        for (int i = 0; i<previousOwners.size(); i++) {
+            if (previousOwners.get(i) == a && previousOwners.get(i+1) == b) {
+                System.out.println("Transaction was made between two of them");
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public String toString() {

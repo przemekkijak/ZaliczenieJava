@@ -85,6 +85,7 @@ public class Human extends Animal {
         if (this.salary > car.value) {
             System.out.println("Nie wiem jak to zrobiłeś, ale stać cie na tą furę! Kupiona za gotówkę");
             this.garage[slot] = car;
+            car.previousOwners.add(this);
             return;
         }
 

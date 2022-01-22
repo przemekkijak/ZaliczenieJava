@@ -29,5 +29,8 @@ public class Main {
         System.out.println("Sprzedawanie auta");
         firstCar.sale(human1, human2, 15000.0);
         human1.sale(human1, human2, 5.0);
+
+        firstCar.checkIfUserHadThisCar(human1);
+        firstCar.checkIfTransactionsWasMade(human1, human2);
     }
 }
