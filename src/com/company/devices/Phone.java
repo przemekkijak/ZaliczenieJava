@@ -9,8 +9,8 @@ public class Phone extends Device {
     int totalStorage;
     static final URL defaultAppServer = null;
 
-    public Phone(String producer, String model, int yearOfProduction, String colour, int ram, int totalStorage) {
-        super(producer, model, yearOfProduction, colour);
+    public Phone(String producer, String model, int yearOfProduction, String colour, int ram, int totalStorage, Double value) {
+        super(producer, model, yearOfProduction, colour, value);
         this.ram = ram;
         this.totalStorage = totalStorage;
     }
