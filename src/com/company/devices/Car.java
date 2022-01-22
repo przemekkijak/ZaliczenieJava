@@ -52,8 +52,8 @@ public abstract class Car extends Device {
         seller.setCar(null, sellerCarSlot);
         buyer.setCar(this, buyerFreeSlot);
 
-        buyer.cash += price;
-        seller.cash -= price;
+        buyer.cash -= price;
+        seller.cash += price;
 
         System.out.println(seller.firstName + " sprzedal samochod uzytkownikowi " + buyer.firstName);
         this.previousOwners.add(buyer);

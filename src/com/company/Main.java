@@ -20,6 +20,8 @@ public class Main {
         Human human1 = new Human("Przemek", "Kijak", 5000.0);
         Human human2 = new Human("Tom", "Kowalski", 3000.0);
 
+        human1.phone = firstPhone;
+
         human1.setSalary(50000.0);
         human1.setCar(firstCar, 0);
 
@@ -30,7 +32,19 @@ public class Main {
         firstCar.sale(human1, human2, 15000.0);
         human1.sale(human1, human2, 5.0);
 
-        firstCar.checkIfUserHadThisCar(human1);
-        firstCar.checkIfTransactionsWasMade(human1, human2);
+//        firstCar.checkIfUserHadThisCar(human1);
+//        firstCar.checkIfTransactionsWasMade(human1, human2);
+
+        Application app1 = new Application("Flying birds", 0.1, 500.0);
+        Application app2 = new Application("Birds flying", 0.3, 150.0);
+        Application app3 = new Application("Birds not flying", 0.8, 100.0);
+
+        firstPhone.installAnnApp(app2, human1);
+        firstPhone.installAnnApp(app1, human1);
+        firstPhone.installAnnApp(app3, human1);
+
+        var alph = firstPhone.getAppsAlphabetical();
+        var priceApps = firstPhone.getAppsByPrice();
+
     }
 }
